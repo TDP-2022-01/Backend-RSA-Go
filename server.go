@@ -214,5 +214,7 @@ func main() {
 	r.GET("/api/generate-keys", GenerateKeys)
 	r.POST("/api/encrypt", EncryptMessage)
 	r.POST("/api/decrypt", DecryptMessage)
+	r.OPTIONS("/api/decrypt", OptionMessage)
+	r.OPTIONS("/api/encrypt", OptionMessage)
 	r.Run(":8000")
 }
