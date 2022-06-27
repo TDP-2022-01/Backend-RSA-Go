@@ -4,6 +4,7 @@ import (
 	"math"
 	"math/rand"
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -216,5 +217,6 @@ func main() {
 	r.POST("/api/decrypt", DecryptMessage)
 	r.OPTIONS("/api/decrypt", OptionMessage)
 	r.OPTIONS("/api/encrypt", OptionMessage)
-	r.Run(":5000")
+	port := os.Getenv("PORT")
+	r.Run(":" + port)
 }
