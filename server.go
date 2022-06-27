@@ -216,5 +216,5 @@ func main() {
 	r.POST("/api/decrypt", DecryptMessage)
 	r.OPTIONS("/api/decrypt", OptionMessage)
 	r.OPTIONS("/api/encrypt", OptionMessage)
-	r.Run(":8000")
+	r.Run(":5000")
 }
